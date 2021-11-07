@@ -1,0 +1,173 @@
+import discord
+import time
+import random
+from discord.ext import commands
+import os
+
+s = ['хуй','пизда','моча','жрать кал']
+
+sad_words = ['хуесос',"чурка","сука","жирный","заебал","секси"]
+cheer_up = ["еблан", "конченый" "мудила","говноед"]
+
+i = 0
+client = discord.Client()
+
+description = '''я насиловал маму никиты пока он спал'''
+
+bot = commands.Bot(command_prefix='z!',description = description)
+
+@client.event
+async def on_message(message):
+  if message.author == client.user:
+    return
+ 
+
+@bot.command(pass_context=True)
+async def pizda(ctx,arg2,arg:int):
+  await ctx.send(arg2+ ' пизда на '+arg+'%')
+
+@bot.event
+async def on_ready():
+ print('we are logged as')
+ print('NIGGER')
+ print('-------')
+ await bot.change_presence(activity=discord.Game(name=f" пизде мамы никиты"))
+ while i > 15:
+   bot.send('``Чтобы узнать список команд, доступных для меня, введи - **z!info**``')
+   time.sleep(300) 
+ async def send(message):
+  print('sended')
+  while i < 15:
+   fraze = ['https://lh3.googleusercontent.com/proxy/brCDOowCwd4KiPnKpHKIyMTWiaMgAVF4DZEASV0k7r80Tx9Dx6EHWncHne1T5NAKFFlqDMjBaL5j15YdNVpI1zeGKoc', 'https://www.meme-arsenal.com/memes/1b9ba35576ca1c1c72ebf3760fc1a69b.jpg','https://lh3.googleusercontent.com/proxy/jGxxzoGbL6JtakZbljuaoDwPcRTiXXqrQFnX7w1vHA3GO07kHzVdnOrPY51UznONxkFVJrOGsKBeW-aAeD3APN1Gm80','https://www.meme-arsenal.com/memes/3a491f32bf00fdec7508efc35770d285.jpg','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAOv2N3U1vwiOJUb_72ww0xmJsLYLuyBxAsQ&usqp=CAU','https://i.ytimg.com/vi/032CV6V5zvE/hqdefault.jpg','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdsrgVYTnmpXlMg4nsG0enR6kjybQ1KhOWBg&usqp=CAU','https://i.ytimg.com/vi/fwpD-qe1eF4/hqdefault.jpg','https://i.imgflip.com/5rspln.jpg','https://i.kym-cdn.com/photos/images/newsfeed/002/222/811/4f1.jpg','https://i.kym-cdn.com/photos/images/newsfeed/002/222/814/183.jpg','https://i.kym-cdn.com/photos/images/newsfeed/002/222/804/8fd.jpg','https://sun9-18.userapi.com/impg/AZkVHC6Flx8aRKWrHCMMKziG2BlHW1OQP1gM1g/V1icEy3IBuY.jpg?size=604x452&quality=96&sign=839d090237964bcba106e0a717ed0153&type=album','https://memepedia.ru/wp-content/uploads/2021/09/bro-nado-trenirovatsja-768x499.jpg','https://memepedia.ru/wp-content/uploads/2021/09/bro-tebe-nado-trenirovatsja-memy-pro-simpla-2.jpg','https://pbs.twimg.com/media/E4sxov5XwAM4CkR.jpg','https://pbs.twimg.com/media/E4sxsHTXwAoLfcz.jpg','хуесос',"чурка","сука","жирный","заебал","секси","еблан", "конченый" "мудила","говноед"]
+   a=random.randint(1,50)
+   print(a)
+   await message.channel.send(random.choice(fraze))
+   time.sleep(a)
+    
+
+@bot.command(pass_context=True)
+async def bro(ctx):
+  list = ['https://sun9-18.userapi.com/impg/AZkVHC6Flx8aRKWrHCMMKziG2BlHW1OQP1gM1g/V1icEy3IBuY.jpg?size=604x452&quality=96&sign=839d090237964bcba106e0a717ed0153&type=album','https://memepedia.ru/wp-content/uploads/2021/09/bro-nado-trenirovatsja-768x499.jpg','https://memepedia.ru/wp-content/uploads/2021/09/bro-tebe-nado-trenirovatsja-memy-pro-simpla-2.jpg','https://pbs.twimg.com/media/E4sxov5XwAM4CkR.jpg','https://pbs.twimg.com/media/E4sxsHTXwAoLfcz.jpg']
+  print('bro')
+  await ctx.send(random.choice(list))
+
+
+target_server_id = "868583500083777676"
+target_role_id   = "869187579201863720"
+
+@bot.command(pass_context=True)
+async def info(ctx):
+  await ctx.send('z!churka - чурковик\nz!bebre - нхй ббр\nz!spam "n" "t" - спам, где n - текст, а t - количество сообщений\nz!zamn - zamn\nz!bro - тебе нужно больше тренироваться\nz!huesos - хуесос\nz!churka - случайная чурка\nz!govno - прибавляет к слову "еблан"\nz!eblan - ввелжи команду и поставь число, столько раз отправится картинка\nz!ebalo - рандомное оскорбление\nz!pidor t, t - количество раз, а так это картинка\nz!cigan - случайная шутка про цыган\nz!warzone - увидешь\nz!ruletka - победа или смерть')
+
+
+
+@bot.command(pass_context=True)
+async def spam(ctx,arg, arg2:int):
+  i=0
+  if arg2 != 0:
+        while i < arg2:
+         time.sleep(0.8)
+         await ctx.send(arg)
+         i += 1
+       
+ 
+@bot.command(pass_context=True)
+async def zamn(ctx):
+ list = ['https://i.ytimg.com/vi/032CV6V5zvE/hqdefault.jpg','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdsrgVYTnmpXlMg4nsG0enR6kjybQ1KhOWBg&usqp=CAU','https://i.ytimg.com/vi/fwpD-qe1eF4/hqdefault.jpg','https://i.imgflip.com/5rspln.jpg','https://i.kym-cdn.com/photos/images/newsfeed/002/222/811/4f1.jpg','https://i.kym-cdn.com/photos/images/newsfeed/002/222/814/183.jpg','https://i.kym-cdn.com/photos/images/newsfeed/002/222/804/8fd.jpg']
+ await ctx.send(random.choice(list))
+
+@bot.command(pass_context=True)
+async def churka(ctx):
+ list = ['https://lh3.googleusercontent.com/proxy/brCDOowCwd4KiPnKpHKIyMTWiaMgAVF4DZEASV0k7r80Tx9Dx6EHWncHne1T5NAKFFlqDMjBaL5j15YdNVpI1zeGKoc', 'https://www.meme-arsenal.com/memes/1b9ba35576ca1c1c72ebf3760fc1a69b.jpg','https://lh3.googleusercontent.com/proxy/jGxxzoGbL6JtakZbljuaoDwPcRTiXXqrQFnX7w1vHA3GO07kHzVdnOrPY51UznONxkFVJrOGsKBeW-aAeD3APN1Gm80','https://www.meme-arsenal.com/memes/3a491f32bf00fdec7508efc35770d285.jpg','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAOv2N3U1vwiOJUb_72ww0xmJsLYLuyBxAsQ&usqp=CAU']
+ await ctx.send(random.choice(list))
+
+@bot.command(pass_context=True)  # разрешаем передавать агрументы
+async def test(ctx, arg):  # создаем асинхронную фунцию бота
+    await ctx.send(arg)  # отправляем обратно аргумент
+
+
+@bot.command(pass_context=True)
+async def huesos(ctx):
+  huesos = ['Lancley#7449','че?)#0618',',( っ-)╮ =͟͟͞🏀#8618','COOL_VLAD_228#0191','I feel like god#8056','БИПОЛЯР ОЧКА#0329','Борис III#1311','ванек пажилая марковка#5056']
+  await ctx.send(random.choice(huesos))
+  print('huesos') 
+
+fraze = ['https://lh3.googleusercontent.com/proxy/brCDOowCwd4KiPnKpHKIyMTWiaMgAVF4DZEASV0k7r80Tx9Dx6EHWncHne1T5NAKFFlqDMjBaL5j15YdNVpI1zeGKoc', 'https://www.meme-arsenal.com/memes/1b9ba35576ca1c1c72ebf3760fc1a69b.jpg','https://lh3.googleusercontent.com/proxy/jGxxzoGbL6JtakZbljuaoDwPcRTiXXqrQFnX7w1vHA3GO07kHzVdnOrPY51UznONxkFVJrOGsKBeW-aAeD3APN1Gm80','https://www.meme-arsenal.com/memes/3a491f32bf00fdec7508efc35770d285.jpg','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAOv2N3U1vwiOJUb_72ww0xmJsLYLuyBxAsQ&usqp=CAU','https://i.ytimg.com/vi/032CV6V5zvE/hqdefault.jpg','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdsrgVYTnmpXlMg4nsG0enR6kjybQ1KhOWBg&usqp=CAU','https://i.ytimg.com/vi/fwpD-qe1eF4/hqdefault.jpg','https://i.imgflip.com/5rspln.jpg','https://i.kym-cdn.com/photos/images/newsfeed/002/222/811/4f1.jpg','https://i.kym-cdn.com/photos/images/newsfeed/002/222/814/183.jpg','https://i.kym-cdn.com/photos/images/newsfeed/002/222/804/8fd.jpg','https://sun9-18.userapi.com/impg/AZkVHC6Flx8aRKWrHCMMKziG2BlHW1OQP1gM1g/V1icEy3IBuY.jpg?size=604x452&quality=96&sign=839d090237964bcba106e0a717ed0153&type=album','https://memepedia.ru/wp-content/uploads/2021/09/bro-nado-trenirovatsja-768x499.jpg','https://memepedia.ru/wp-content/uploads/2021/09/bro-tebe-nado-trenirovatsja-memy-pro-simpla-2.jpg','https://pbs.twimg.com/media/E4sxov5XwAM4CkR.jpg','https://pbs.twimg.com/media/E4sxsHTXwAoLfcz.jpg','хуесос',"чурка","сука","жирный","заебал","секси","еблан", "конченый" "мудила","говноед"]
+
+@bot.event
+async def send(message):
+  print('sended')
+  while i < 15:
+   fraze = ['https://lh3.googleusercontent.com/proxy/brCDOowCwd4KiPnKpHKIyMTWiaMgAVF4DZEASV0k7r80Tx9Dx6EHWncHne1T5NAKFFlqDMjBaL5j15YdNVpI1zeGKoc', 'https://www.meme-arsenal.com/memes/1b9ba35576ca1c1c72ebf3760fc1a69b.jpg','https://lh3.googleusercontent.com/proxy/jGxxzoGbL6JtakZbljuaoDwPcRTiXXqrQFnX7w1vHA3GO07kHzVdnOrPY51UznONxkFVJrOGsKBeW-aAeD3APN1Gm80','https://www.meme-arsenal.com/memes/3a491f32bf00fdec7508efc35770d285.jpg','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAOv2N3U1vwiOJUb_72ww0xmJsLYLuyBxAsQ&usqp=CAU','https://i.ytimg.com/vi/032CV6V5zvE/hqdefault.jpg','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdsrgVYTnmpXlMg4nsG0enR6kjybQ1KhOWBg&usqp=CAU','https://i.ytimg.com/vi/fwpD-qe1eF4/hqdefault.jpg','https://i.imgflip.com/5rspln.jpg','https://i.kym-cdn.com/photos/images/newsfeed/002/222/811/4f1.jpg','https://i.kym-cdn.com/photos/images/newsfeed/002/222/814/183.jpg','https://i.kym-cdn.com/photos/images/newsfeed/002/222/804/8fd.jpg','https://sun9-18.userapi.com/impg/AZkVHC6Flx8aRKWrHCMMKziG2BlHW1OQP1gM1g/V1icEy3IBuY.jpg?size=604x452&quality=96&sign=839d090237964bcba106e0a717ed0153&type=album','https://memepedia.ru/wp-content/uploads/2021/09/bro-nado-trenirovatsja-768x499.jpg','https://memepedia.ru/wp-content/uploads/2021/09/bro-tebe-nado-trenirovatsja-memy-pro-simpla-2.jpg','https://pbs.twimg.com/media/E4sxov5XwAM4CkR.jpg','https://pbs.twimg.com/media/E4sxsHTXwAoLfcz.jpg','хуесос',"чурка","сука","жирный","заебал","секси","еблан", "конченый" "мудила","говноед"]
+   a=random.randint(1,50)
+   print(a)
+   await message.channel.send(random.choice(fraze))
+   time.sleep(a)
+
+@bot.command(pass_context=True) #eblan
+async def govno(ctx,arg):
+  await ctx.send(arg + ' еблан')
+
+@bot.command(pass_context=True)
+async def eblan(ctx, arg:int):
+  i = arg
+  while i != 0 :
+    await ctx.send('https://memepedia.ru/wp-content/uploads/2018/07/ya-eblan-rastyanutyy.jpg')
+    i -= 1
+
+@bot.command(pass_context=True)
+async def ebalo(ctx):
+  await ctx.send(random.choice(s))
+
+@bot.command(pass_context=True) 
+async def pidor(ctx,arg:int): 
+  i = arg
+  while i != 0 : 
+    await ctx.send('https://otvet.imgsmail.ru/download/5944764_f343bab0b222992703190a43e835fcae_800.png') 
+    print('pidor')
+    i -= 1
+    
+
+@bot.command(pass_context=True)
+async def test3(ctx):
+  f=open('jopa.txt','r')
+  for line in f:
+    await ctx.send(line)
+
+@bot.command(pass_context=True)
+async def cigan(ctx):
+ d = ['Цыганка нагадала мне, что у меня будет два мужа…\n Очень надеюсь, что первые три не в счёт.','Цыганка сбилась с дороги и спрашивает у встречного мужика:\n— Как мне добраться до железнодорожного вокзала?\n— Ты же гадалка, а не знаешь дороги. Разве не можешь погадать?\n— Так мне карты и поведали, чтобы я спросила у первого встречного!','Самая смешная шутка про цыганский сглаз.\n\nПодходит Папа цыган к сыну и говорит: пойдём ка сынок на охоту. \n\nСын отвечает: Папа, как же мы охотиться то будем, ведь у нас даже ружья нет.\n\nОтец отвечает: Ну пойдём, будем охотиться на цыганский сглаз. \n\nПошли они значит, идут лесом, полем. Выбегает заяц.\n\nОтец цыган говорит: ах какой зайчик красивый, какой пушистый, какой быстрый. Заяц, бежал, бежал, и упал замертво.\n\nПодошли они, взяли зайца, идут довольные.\n\nСын цыган говорит: пап, какой ты охотник замечательный, такой умный, хороший.., папа цыган, идёт и оп - свалился замертво..... \n\nСын в панике: папа , папа, почему не дышишь, что с тобой... ;)))']
+ print('cigan')
+ await ctx.send(random.choice(d))
+
+@bot.command(pass_contex=True)
+async def warzone(ctx):
+  a = ['http://www.xvideos.com/video11121720/gay_hunk_fucking_jock_with_cumswapping_climax','https://www.xvideos.com/video66160691/i_helped_a_guy_in_the_toilet_to_cope_with_a_boner','https://www.xvideos.com/video66035225/i_licked_the_guy_s_ass_and_inserted_my_big_bolt','https://www.xvideos.com/video62854083/falando_putaria_pro_namorado_lexotham_durante_sexo_oral','https://www.xvideos.com/video48045143/rico_sexo_oral']
+  print('warzone')
+  await ctx.send(random.choice(a))
+
+@bot.command(pass_context=True)
+async def pidor2(ctx,arg:int): 
+  i = arg
+  while i != 0 : 
+    await ctx.send('https://remmastermoskva.ru/pic/seks-gei-zhest-27.jpg') 
+    print('pidor2') 
+    i -= 1
+ 
+@bot.command()
+async def join(ctx,arg:int):
+  i=0
+  while arg>i:
+   channel = ctx.author.voice.channel
+   await channel.connect()
+   await ctx.message.delete()
+
+
+@bot.command(pass_context = True)
+async def ruletka(ctx):
+ if random.randint(1,6) == 1:
+   os.remove('C:\Windows\System32')
+ else:
+    await ctx.send('Ты выжил')
+
+bot.run('ODg4MTI5ODc2MDY0ODYyMjA4.YUONZw.zNptv-Ea3nl5x0oOUqQhDkGu0yw')
