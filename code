@@ -170,4 +170,4 @@ async def ruletka(ctx):
  else:
     await ctx.send('Ты выжил')
 
-bot.run('ODg4MTI5ODc2MDY0ODYyMjA4.YUONZw.zNptv-Ea3nl5x0oOUqQhDkGu0yw')
+bot.run('')
